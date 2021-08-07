@@ -1,6 +1,6 @@
 import backtrader as bt
 import datetime
-from strats import TestStrategy
+from buyandhold import Strat
 
 #* We need to connect a datafeed to a strategy for backtrader to do its thing. 
 cerebro = bt.Cerebro()
@@ -19,7 +19,7 @@ data = bt.feeds.YahooFinanceCSVData(
 
 cerebro.adddata(data) #* Import data from feed
 
-cerebro.addstrategy(TestStrategy) #* Import strategy from our strategy py file
+cerebro.addstrategy(Strat) #* Import strategy to buy and hold from our strategy directory
 cerebro.addsizer(bt.sizers.FixedSize, stake=1000) #* Set order size to 1000 shares (default 1)
 
 print('Starting Portfolio Value: %.2f' % cerebro.broker.getvalue())

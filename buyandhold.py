@@ -1,7 +1,13 @@
 import backtrader as bt
 
-#* Simple test strategy that only buys after multiple days down (buy the dip)
-class TestStrategy(bt.Strategy):
+class Strat(bt.Strategy):
+    """
+    Simple trading strategy that buys a stock after 2 days of downtrend (buy the dip!) 
+    and then sells after 5 days of holding that position. Buy and hold, effectively.
+
+    Args:
+        bt (backtrader strategy): Base strategy
+    """
 
     def __init__(self):
         """
