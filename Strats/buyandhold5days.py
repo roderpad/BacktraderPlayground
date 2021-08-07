@@ -6,7 +6,7 @@ class Strat(bt.Strategy):
     and then sells after 5 days of holding that position. Buy and hold, effectively.
 
     Args:
-        bt (backtrader strategy): Base strategy
+        bt (backtrader strategy): Base strategy that is extended here
     """
 
     def __init__(self):
