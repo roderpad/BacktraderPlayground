@@ -6,8 +6,12 @@
 
 In this project, I learn about the backtrader python package and apply it to different trading strategies. More to follow...
 
-<!--- ## Links
+## Links
 
+- [Backtrader Quick Start](https://www.backtrader.com/docu/quickstart/quickstart/ "BT Quick Start")
+
+- [ORCL Dataset](https://github.com/mementum/backtrader/blob/master/datas/orcl-1995-2014.txt "ORCL Dataset")
+<!--- 
 - [Repo](https://github.com/roderpad/<project-name> "<project-name> Repo")
 
 - [Live](<Homepage url> "Live View of Create Project Website, if relevant")

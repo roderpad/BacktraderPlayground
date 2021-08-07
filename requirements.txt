@@ -1,2 +1,3 @@
-backtrader
+# This is backtrader, but a specific version is needed on python3.9 to prevent plotting issues in locator.py file within backtrader package
+-e git+https://github.com/mementum/backtrader.git@0fa63ef4a35dc53cc7320813f8b15480c8f85517#egg=backtrader
 matplotlib
