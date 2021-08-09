@@ -4,49 +4,59 @@
 
 ## Description
 
-In this project, I learn about the backtrader python package and apply it to different trading strategies. More to follow...
+In this project, I've provided some examples of what I learned about the backtrader python package by following along with [Part Time Larry's](https://www.youtube.com/watch?v=UNkH1TQl7qo "Algorithmic Trading with Python and Backtrader") "Algorithmic Trading with Python and Backtrader" videos on youtube. The current project has two datasets (Oracle stock and S&P 500) and two trading strategies (Golden Cross and Buy & Hold for 5 days). 
 
 ## Links
 
 - [Backtrader Quick Start](https://www.backtrader.com/docu/quickstart/quickstart/ "BT Quick Start")
 
 - [ORCL Dataset](https://github.com/mementum/backtrader/blob/master/datas/orcl-1995-2014.txt "ORCL Dataset")
-<!--- 
-- [Repo](https://github.com/roderpad/<project-name> "<project-name> Repo")
 
-- [Live](<Homepage url> "Live View of Create Project Website, if relevant")
+- [Golden Cross/Death Cross](https://www.daytradetheworld.com/trading-blog/golden-cross/ "Golden Cross Strat")
 
-- [Bugs](https://github.com/roderpad/<project-name>/issues "Issues Page")
+- [Repo](https://github.com/roderpad/BacktraderPlayground "BacktraderPlayground Repo")
 
-- [API](<API Link> "API, if relevant")
+- [Bugs](https://github.com/roderpad/BacktraderPlayground/issues "Issues Page")
 
 ## Screenshots
 
-![Home Page](/screenshots/Chart-SS.png "Chart Example")
+![Example Input](/screenshots/ProgramRun.png "Example Input")
+![Example Output](/screenshots/Output.png "Example Output")
 
-## Available Commands
+## How To Use
 
-In the project directory, you can run:
+An example of how to run this is: `python trader.py golden_cross SPY 5000 20`. This runs the backtest using the golden_cross strategy using S&P500 data starting with $5k and order sizes of 20 stocks.
 
-### `npm start" : "react-scripts start"`,
+The five arguments:
 
-The app is built using `create-react-app` so this command Runs the app in Development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. You also need to run the server file as well to completely run the app. The page will reload if you make edits.
-You will also see any lint errors in the console.
+### `strategy`,
 
-### `"npm run build": "react-scripts build"`,
+The type of strategy you want to backtest. Currently only `golden_cross` and `buy_hold5days` are accepted.
 
-Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. Your app will be ready to deploy!
+### `ticker`,
 
+The stock ticker used to test your strategy on. Currently only `ORCL` and `SPY` are accepted.
+
+### `starting_cash`,
+
+The amount of cash you want to start your backtest with.
+
+### `order_size`,
+
+The number of stocks you wish to execute an order with.
 
 ## Built With
 
 - Python
-- Plotly
+- Matplotlib
+- Backtrader
 
 ## Future Updates
 
-- [ ] Example TODO
---->
+- Get ticker and historical price data programmatically
+- Allow for input of date range arguments
+- Create more sophisticated buy options for placed orders
+
 ## Author
 
 **Paden Roder**
